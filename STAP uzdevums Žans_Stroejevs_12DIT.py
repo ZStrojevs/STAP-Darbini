@@ -1,9 +1,9 @@
 class Student:
-    def __init__(self, year, name):
+    def __init__(self, year, name, attendance):
         self.name = name
         self.year = year
         self.grades = []
-        self.attendance = {}
+        self.attendance = attendance
     def add_grade(self, grade):
         if isinstance(grade, Grade):
             self.grades.append(grade)
@@ -20,9 +20,9 @@ class Grade:
             print(f"Score has passing score")
 
         
-Roger = Student(10, "Roger van der Weyden")
-Sandro = Student(12, "Sandro Botticelli")
-Pieter = Student(8, "Pieter Bruegel the Elder")
+Roger = Student(10, "Roger van der Weyden", {"04062024": True})
+Sandro = Student(12, "Sandro Botticelli", {"04062024": False})
+Pieter = Student(8, "Pieter Bruegel the Elder", {"04062024": False})
 
 grade1 = Grade(100)
 Pieter.add_grade(grade1)
